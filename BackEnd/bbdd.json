@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5c49d3114519833838c2cdc6"},"name":"Pollo","imagen":"https://www.dominospizza.es/images/pizza_buffalo.png","info":"Pizza de Pollo","precio":"25","arrayIngrediente":[]}
+{"_id":{"$oid":"5c49d4e8e8a942b545b4fdd1"},"name":"Vegetal","imagen":"https://www.dominospizza.es/images/campinapan.png","info":"Pizza de Vegetal","precio":"25"}
+{"_id":{"$oid":"5c49d4e8e8a942b545b4fdd2"},"name":"Becon","imagen":"https://www.dominospizza.es/images/Pulled%20Beef.png","info":"Pizza de Becon","precio":"25"}
+{"_id":{"$oid":"5c49d4e8e8a942b545b4fdd3"},"name":"A tu gusto","imagen":"https://www.dominospizza.es/images/cremozza_bbq.png","info":"Elige  ingredientes","precio":"25"}
+{"_id":{"$oid":"5c49d75b4519833838c2cdc7"},"name":"A tu gusto","imagen":"https://www.dominospizza.es/images/Pizza por mitades.png","info":"Piza por mitades","precio":"25","arrayIngredientes":[]}
