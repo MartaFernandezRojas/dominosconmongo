@@ -1,0 +1,15 @@
+.nav-link{
+    margin-left: 200px;
+    color:rgb(245, 243, 243);
+}
+
+p{ 
+    font-size:17px;
+}
+
+.divNav{
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #0062b7;
+}

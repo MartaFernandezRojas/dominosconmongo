@@ -1,0 +1,102 @@
+p {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.proporcion {
+  background-size: cover;
+  height: 300px;
+  border: white 10px solid;
+}
+
+.malaga {
+  background-image: url(../imagenes/malaga.jpg);
+}
+
+.sevilla {
+  background-image: url(../imagenes/sevilla.jpg);
+}
+
+.almeria {
+  background-image: url(../imagenes/almeria.jpg);
+}
+
+.jaen {
+  background-image: url(../imagenes/jaen.jpg);
+}
+
+.huelva {
+  background-image: url(../imagenes/huelva.jpg);
+}
+
+.granada {
+  background-image: url(../imagenes/granada.jpg);
+}
+
+.cordoba {
+  background-image: url(../imagenes/cordoba.jpg);
+}
+
+.cadiz {
+  background-image: url(../imagenes/cadiz.jpg);
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+h3 {
+  color: #f4f5f3;
+  margin-top: 140px;
+}
+
+.imagen1 {
+  background-image: url(../imagenes/malaga.jpg);
+}
+
+.imagen2 {
+  background-image: url(../imagenes/sevilla.jpg);
+}
+
+.imagen3 {
+  background-image: url(../imagenes/jaen.jpg);
+}
+
+.imagenCarousel {
+  background-size: cover;
+  height: 80vh;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 250px;
+  height: 70px;
+}
+
+.list {
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerClase {
+  background-color: #b5b7b9;
+  height: 300px;
+}
+
+i {
+  font-size: 60px;
+}
+
+.fa-user {
+  font-size: 30px;
+}
+
+* {
+  font-family: 'Abel', sans-serif;
+}
+/*# sourceMappingURL=texto.css.map */

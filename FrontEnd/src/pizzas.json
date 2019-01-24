@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Pollo",
+    "imagen": "https://www.dominospizza.es/images/pizza_buffalo.png",
+    "info":"Pizza de pollo",
+    "precio":"25"
+  },
+  {
+    "name": "Vegetal",
+    "imagen": "https://www.dominospizza.es/images/campinapan.png",
+    "info":"Pizza de Vegetal",
+    "precio":"25"
+  },
+  {
+    "name": "Becon",
+    "imagen": "https://www.dominospizza.es/images/Pulled%20Beef.png",
+    "info":"Pizza de Becon",
+    "precio":"25"
+  },
+  {
+    "name": "A tu gusto",
+    "imagen": "https://www.dominospizza.es/images/cremozza_bbq.png",
+    "info":"Elige  ingredientes",
+    "precio":"25"
+
+  }
+]
