@@ -17,14 +17,15 @@ class HojaPedido extends Component {
     return (
       <div>
         {this.state.HojaPedido.map((e) => {
+          e.pedido.forEach(element => {
+            console.log(element.name);
           return (
-            <div>
-              {e.pedido.forEach(element => {
-                console.log(element.name);
-              })}
-            </div>
+            <div><p>Hola</p>
+                <p>{element.name}</p></div>
           )
+        })
         })}
+  
       </div>
     )
   }
