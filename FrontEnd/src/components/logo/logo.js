@@ -2,9 +2,11 @@ import React from "react";
 import "./logo.css";
 
 const Logo = () => (
-  <div className="container">
+  <div className="container banner">
+    
     <div className="row">
-      <div className="col-l12">
+
+      <div className="col-l12 center">
         <img
           className="img-fluid"
           alt="Responsive image"

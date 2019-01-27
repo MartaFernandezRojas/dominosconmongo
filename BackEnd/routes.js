@@ -4,5 +4,5 @@ var pedidoController = require('./Controllers/pedidosController');
 
 app.get('/pizzas', pizzaController.getProjects);
 app.post('/pedido', pedidoController.addPedido);
-
+app.get('/consultpedido', pedidoController.getPedido);
 module.exports=app;

@@ -5,4 +5,6 @@ var coleccionPedidos = Schema({
     id_user: String,
     pedido: []
 })
+
+
 module.exports = mongoose.model('pedidos', coleccionPedidos);  

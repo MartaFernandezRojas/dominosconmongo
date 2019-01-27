@@ -16,6 +16,10 @@ function anadirMitades(ing1,ing2){
     return arrayIngrediente;
 }
 
+function limpiar(){
+  arrayIngrediente= [];
+}
+
 function atugusto(name){
  
     if (name=="A tu gusto"){
@@ -59,7 +63,6 @@ class Pizza extends Component {
   componentDidMount(){
     axios.get('http://localhost:3200/pizzas')
     .then(response =>{
-      console.log(response.data);
       this.setState({ pizza: response.data })
     })
   }
@@ -86,9 +89,11 @@ class Pizza extends Component {
                   <button  class="btn btn-primary" onClick={()=>{
                     e.tamano=document.getElementById(idd).value;
                     this.props.anadir({...e, arrayIngrediente});
+                    limpiar();
                     }} className="btn btn-primary">
                     Comprar
                   </button>
+                  
                 </div>
               </div>
             </div>

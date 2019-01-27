@@ -11,6 +11,15 @@ var controller = {
                 return res.send(result)
             }
         })
+    },
+    getPedido: (req, res) => {
+        pedidosModel.find({}, (err, result) => {
+            if (err) {
+                res.send(err)
+            } else {
+                res.status(200).send(result);
+            }
+        })
     }
 
 };
