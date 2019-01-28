@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Bootstrap/bootstrap.css';
 import './App.css';
 import Main from './components/main/main';
-import Logo from './components/logo/logo';
+
 import Carrito from './components/carrito/Carrito';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter } from 'react-router-dom';
@@ -30,7 +30,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Carrito arrayPizzas={this.state.pizzas} />
-            <Logo />
+         
             <Main anadir={this.anadirPizza} />
             <Footer />
           </header>

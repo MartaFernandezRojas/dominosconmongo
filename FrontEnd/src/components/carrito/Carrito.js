@@ -5,15 +5,20 @@ import HojaPedido from "../HojaPedido/HojaPedido";
 import { Switch, Route, Link } from 'react-router-dom';
 var precio = 0;
 
+
+
 export class Carrito extends Component {
   state = {
     pizzas: []
   };
 
-  confirmarPedido(e) {
-    axios.post('http://localhost:3200/pedido', e)
-      .then(response => {
+
+
  
+  confirmarPedido(e) {
+    axios.post('http://localhost:3200/pedidos', e)
+      .then(response => {
+        this.setState({pizzas:[]})
       })
   }
 
@@ -40,6 +45,7 @@ export class Carrito extends Component {
                         precio = parseInt(e.precio);
                         if (e.tamano == "Grande") {
                           precio = precio * 2;
+                       
                         }
                         total = total + precio;
                         return (

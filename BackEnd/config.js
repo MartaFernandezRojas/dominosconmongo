@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/dominos', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/Dominos', { useNewUrlParser: true })
     .then(() => {
         console.log('La conexión a MongoDB ha sido realizada correctamente')
     })
