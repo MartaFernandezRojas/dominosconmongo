@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import "./HojaPedido.css";
 import axios from 'axios';
 
+function mitades2(name,  array){
+  if(name=="A tu gusto" || name=="Mitades"){
+    return(
+      <p>Ingredientes: {array}</p>
+    )
+  }
+}
 
 class HojaPedido extends Component {
   state = {
@@ -15,20 +22,27 @@ class HojaPedido extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container pedidos">
         <h4>Hoja de Pedidos</h4>
         <div className="row">
               {this.state.HojaPedido.map((e) => {
+                let total=0;
                 return (
-                  <div className="col-l6 bloque" >
-                    <h5>Numero de pedido: {e._id}</h5>
+                  <div className="col-l12 bloque" >
+                  <div className="card card-hover">
+                    <h5 className="card-title">Num. pedido: {e._id}</h5>
                     {e.pedido.map(element => {
                       console.log(element);
+                      total+=parseInt(element.precio);
                       return (
-                          <p> {element.info} - {element.tamano}: {element.precio}€
-                            {element.arrayIngrediente} </p>
+                          <p className="card-text"> {element.info} - {element.tamano}: {element.precio}€
+
+                          {mitades2(element.name,element.arrayIngrediente)}
+                             </p>
                       )
                     })}
+                    <h5>Precio total: {total} €</h5>
+                    </div>
                   </div>
                 );
               })}

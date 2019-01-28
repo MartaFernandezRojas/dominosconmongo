@@ -43,20 +43,18 @@ export class Carrito extends Component {
                       <hr />
                       {this.state.pizzas.map(e => {
                         precio = parseInt(e.precio);
-                        if (e.tamano == "Grande") {
-                          precio = precio * 2;
-                       
-                        }
                         total = total + precio;
                         return (
                           <div>
                             <p>
                               Pizza {e.name} - {e.tamano} - {precio}€
                             {e.arrayIngrediente}
+                           
                               <hr />
                             </p>
                           </div>
                         );
+                        
                       })}
                       <p>Total Pedido:{total} €</p>
                       <button onClick={() => {

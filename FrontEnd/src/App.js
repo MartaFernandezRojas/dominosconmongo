@@ -18,8 +18,17 @@ class App extends Component {
   anadirPizza = this.anadirPizza.bind(this);
 
   anadirPizza(p) {
+
     let arrayPizzas = this.state.pizzas;
-    arrayPizzas.push(p);
+    if (p.tamano == "Grande") {
+    
+      arrayPizzas.push({
+        ...p,
+        precio:50
+      })
+    } else {
+        arrayPizzas.push(p);
+    }
     this.setState({ pizzas: arrayPizzas })
   }
 
@@ -30,7 +39,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Carrito arrayPizzas={this.state.pizzas} />
-         
+
             <Main anadir={this.anadirPizza} />
             <Footer />
           </header>
