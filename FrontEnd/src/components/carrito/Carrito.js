@@ -48,8 +48,11 @@ export class Carrito extends Component {
                           <div>
                             <p>
                               Pizza {e.name} - {e.tamano} - {precio}€
-                            {e.arrayIngrediente}
-                           
+                              <ul>
+                            {e.arrayIngrediente.map(e=>{
+                               return( <li>{e}</li>)
+                            })}
+                          </ul>
                               <hr />
                             </p>
                           </div>

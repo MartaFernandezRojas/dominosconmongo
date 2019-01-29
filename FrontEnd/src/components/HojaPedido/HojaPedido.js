@@ -28,22 +28,28 @@ class HojaPedido extends Component {
               {this.state.HojaPedido.map((e) => {
                 let total=0;
                 return (
-                  <div className="col-l12 bloque" >
+                  <div className="col-l6 bloque">
                   <div className="card card-hover">
-                    <h5 className="card-title">Num. pedido: {e._id}</h5>
+                  <div className="col-l6 bloque">
+                  <h5 className="card-title">Num. pedido: {e._id}</h5>
+                  <img className="card-img-top pedidos" src={e.pedido[0].imagen} alt="..." />
+                  </div>
+                
+                    <h5>Descripción de pedido:</h5>
                     {e.pedido.map(element => {
                       console.log(element);
                       total+=parseInt(element.precio);
                       return (
                           <p className="card-text"> {element.info} - {element.tamano}: {element.precio}€
-
                           {mitades2(element.name,element.arrayIngrediente)}
                              </p>
                       )
                     })}
-                    <h5>Precio total: {total} €</h5>
+                  
+                    <h5 className="total">Precio total: {total} €</h5>
                     </div>
-                  </div>
+                    </div>
+                
                 );
               })}
        

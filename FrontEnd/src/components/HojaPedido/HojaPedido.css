@@ -6,4 +6,11 @@ p{
     color:rgb(34, 33, 33);
 }
 
+.pedidos{
+    width: 25%;
+}
 
+.total{
+    height: 150%;
+    background-color:rgb(236, 232, 232);
+}
