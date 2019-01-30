@@ -5,16 +5,11 @@ import HojaPedido from "../HojaPedido/HojaPedido";
 import { Switch, Route, Link } from 'react-router-dom';
 var precio = 0;
 
-
-
 export class Carrito extends Component {
   state = {
     pizzas: []
   };
 
-
-
- 
   confirmarPedido(e) {
     axios.post('http://localhost:3200/pedidos', e)
       .then(response => {
