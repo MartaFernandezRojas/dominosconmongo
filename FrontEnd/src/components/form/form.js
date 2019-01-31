@@ -4,20 +4,30 @@ import axios from 'axios';
 
 class Form extends Component {
 
-    state={
-        user:{}
+    state = {
+        user: {},
+        usuario: []
     };
-    insertUser(e,a,em,p){
-        this.setState({user: {nombre:e,apellido:a,email:em,password:p}});
+    insertUser(e, a, em, p) {
+        this.setState({ user: { nombre: e, apellido: a, email: em, password: p } });
+    }
+    registerUser(e, p) {
+        this.setState({ user: { email: e, password: p } });
+        
     }
 
+    verificarUser() {
+        axios.get('http://localhost:3200/login2')
+            .then(response => {
+                this.setState({ usuario: response.data})
+            })
+    }
     confirmarUser(e) {
         axios.post('http://localhost:3200/login', e)
-          .then(response => {
-            // this.setState({user:[]})
-            console.log(this.state);
-          })
-      }
+            .then(response => {
+                this.setState({ user: [] })
+            })
+    }
 
     render() {
         return (
@@ -36,27 +46,35 @@ class Form extends Component {
                                 <input className="form-control" id="email" type="email" name="Email" placeholder="Email" />
                                 <h5>Password</h5>
                                 <input className="form-control" id="password" type="password" name="Password" placeholder="Password" />
-                                <input type='button' onClick={()=>{
-                                    this.insertUser(document.getElementById("nombre").value,document.getElementById("apellido").value,document.getElementById("email").value,document.getElementById("password").value);
+                                <input type='button' onClick={() => {
+                                    this.insertUser(document.getElementById("nombre").value, document.getElementById("apellido").value, document.getElementById("email").value, document.getElementById("password").value);
                                     this.confirmarUser(this.state.user);
-                                }} class="btn btn-primary" value='Confirmar'/>
+                                }} className="btn btn-primary" value='Confirmar' />
                             </form>
                         </div>
                     </div>
-                    {/* <div className="col-md-5">
+                    <div className="col-md-5">
                         <div className="card">
                             <h2>LogIn</h2>
                             <form className="form">
                                 <h5>Email</h5>
-                                <input className="form-control" id="email" type="text" name="email" placeholder="Email" />
+                                <input className="form-control" id="email2" type="text" name="email" placeholder="Email" />
                                 <h5>Password</h5>
-                                <input className="form-control" id="password" type="password" name="password" placeholder="Password" />
-                                <button className="btn btn-primary" >Enviar</button>
+                                <input className="form-control" id="password2" type="password" name="password" placeholder="Password" />
+                                <input type='button' onClick={() => {
+                                    this.registerUser(document.getElementById("email2").value, document.getElementById("password2").value);
+                                    this.verificarUser();
+
+                                    {this.state.usuario.map((e)=>{
+                                        console.log(e.info.email);
+                                    })}
+
+                                }} className="btn btn-primary" value="Confirmar" />
                             </form>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
-                </div>
+            </div>
         )
     }
 };

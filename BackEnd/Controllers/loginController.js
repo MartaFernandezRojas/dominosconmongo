@@ -12,17 +12,16 @@ var controller = {
             }
         })
     },
-    getLogin:()=>{
-        login = new loginModel();
-        login.info = req.body;
-        login.save((err, result) => {
+    getLogin: (req, res) => {
+        loginModel.find({}, (err, result) => {
             if (err) {
-                return res.send(err);
+                res.send(err)
             } else {
-                return res.send(result)
+                res.status(200).send(result);
             }
         })
     }
+
 };
 
 module.exports = controller;
