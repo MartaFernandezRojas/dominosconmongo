@@ -24,7 +24,7 @@ class HojaPedido extends Component {
     return (
       <div className="container pedidos">
         <h4>Hoja de Pedidos</h4>
-        <div className="row">
+        <div className="row h-100 justify-content-center">
               {this.state.HojaPedido.map((e) => {
                 let total=0;
                 return (

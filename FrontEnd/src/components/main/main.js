@@ -8,8 +8,8 @@ import Form from '../form/form';
 const Main = (props) => (
   <Switch>
     <Route path="/" exact render={() => {
-      return (<div className="container">
-        <div className="row">
+      return (<div>
+        <div>
         <Logo />
           <Pizza anadir={props.anadir} />
         </div>

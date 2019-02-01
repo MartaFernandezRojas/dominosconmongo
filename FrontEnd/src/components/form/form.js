@@ -4,6 +4,7 @@ import axios from 'axios';
 
 class Form extends Component {
 
+
     state = {
         user: {},
         usuario: []
@@ -12,20 +13,17 @@ class Form extends Component {
         this.setState({ user: { nombre: e, apellido: a, email: em, password: p } });
     }
     registerUser(e, p) {
-        this.setState({ user: { email: e, password: p } });
         
+        this.setState({ usuario: { email: e, password: p } });
+       
     }
 
     verificarUser() {
-        axios.get('http://localhost:3200/login2')
-            .then(response => {
-                this.setState({ usuario: response.data})
-            })
+      
     }
     confirmarUser(e) {
         axios.post('http://localhost:3200/login', e)
             .then(response => {
-                this.setState({ user: [] })
             })
     }
 
@@ -63,12 +61,13 @@ class Form extends Component {
                                 <input className="form-control" id="password2" type="password" name="password" placeholder="Password" />
                                 <input type='button' onClick={() => {
                                     this.registerUser(document.getElementById("email2").value, document.getElementById("password2").value);
-                                    this.verificarUser();
-
-                                    {this.state.usuario.map((e)=>{
-                                        console.log(e.info.email);
-                                    })}
-
+                                    this.state.user.map((e)=>{
+                                        if (e.email==this.state.usuario.email){
+                                            console.log('ok');
+                                        }
+                                        
+                                    })
+                                 
                                 }} className="btn btn-primary" value="Confirmar" />
                             </form>
                         </div>

@@ -24,7 +24,7 @@ class App extends Component {
     
       arrayPizzas.push({
         ...p,
-        precio:50
+        precio:25.20
       })
     } else {
         arrayPizzas.push(p);
@@ -39,7 +39,6 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Carrito arrayPizzas={this.state.pizzas} />
-
             <Main anadir={this.anadirPizza} />
             <Footer />
           </header>
